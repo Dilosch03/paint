@@ -46,13 +46,10 @@ def rectangle(start, end):
     down()
     begin_fill()
 
-    dx = abs(start.x-end.x)
-    dy = abs(start.y-end.y)
-
     for _ in range(2):
-       forward(dx)
+       forward(end.x-start.x)
        right(90)
-       forward(dy)
+       forward(start.y-end.y)
        right(90)
 
     end_fill()
