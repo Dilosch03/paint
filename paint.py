@@ -4,9 +4,7 @@ Exercises
 
 1. Add a color.
 2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
-5. Add width parameter.
+3. Add width parameter.
 """
 
 from turtle import *
@@ -47,7 +45,7 @@ def rectangle(start, end):
     goto(start.x,start.y)
     down()
     begin_fill()
-    
+
     dx = abs(start.x-end.x)
     dy = abs(start.y-end.y)
 
@@ -58,9 +56,14 @@ def rectangle(start, end):
        right(90)
 
     end_fill()
+
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    begin_fill()
+    line(start,end)
+    goto(end.x,start.y)
+    goto(start.x,start.y)
+    end_fill()
 
 
 def tap(x, y):
